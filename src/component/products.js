@@ -2,7 +2,14 @@ import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 
 export function Products({ title = "Produtos", data = [] }) {
   return (
-    <Box>
+    <Box
+      sx={{
+        flex: 1,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+      }}
+    >
       <Typography variant="caption">{title}</Typography>
       <Grid container spacing={{ xs: 2, md: 3, lg: 4 }} my={2}>
         {data.map((item) => {

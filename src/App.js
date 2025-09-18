@@ -32,7 +32,7 @@ function App() {
   ];
 
   return (
-    <Container>
+    <Container sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       <Header title="Loja de produtos" />
       <Products title="Lista de Produtos" data={data} />
       <Footer>Todos os direitos reservados</Footer>
