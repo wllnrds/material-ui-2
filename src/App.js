@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./component/footer";
+import Header from "./component/header";
+import { Products } from "./component/products";
+import Container from "@mui/material/Container";
 
 function App() {
+  const data = [
+    {
+      id: 1,
+      name: "Produto 1",
+      price: 10.0,
+      image: "https://placehold.co/150x150",
+    },
+    {
+      id: 2,
+      name: "Produto 2",
+      price: 20.0,
+      image: "https://placehold.co/150x150",
+    },
+    {
+      id: 3,
+      name: "Produto 3",
+      price: 30.0,
+      image: "https://placehold.co/150x150",
+    },
+    {
+      id: 4,
+      name: "Produto 4",
+      price: 40.0,
+      image: "https://placehold.co/150x150",
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header title="Loja de produtos" />
+      <Products title="Lista de Produtos" data={data} />
+      <Footer>Todos os direitos reservados</Footer>
+    </Container>
   );
 }
 
